@@ -1,4 +1,4 @@
-require "swalidate/version"
+require 'swalidate/version'
 
 module Swalidate
   # Your code goes here...
