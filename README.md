@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+swalidate_config = {
+  file_path:  'path.yaml', # swagger config file. example of app root
+  subdomain:  'api', # validation applies only to this subdomain
+  path_prefix: '/v1' # validation applies only to the paths starting with path_prefix
+}
+config.middleware.insert_after ActionDispatch::ParamsParser, Swalidate::Middleware, swalidate_config
+```
 
 ## Development
 
